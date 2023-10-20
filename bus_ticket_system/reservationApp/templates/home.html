@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+
+<!--Section: Content-->
+<section class="">
+    {% if user.id %}
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-primary text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Categories</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ categories|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-warning text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Buses</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ buses|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-bus fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-success text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Upcoming Trip</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ upcoming_trip|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-file-invoice fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="card card-default rounded-0 shadow border border-dark">
+        <div class="card-body">
+            <div class="container-fluid">
+                <h2 class="text-center fw-bold">Welcome to Online Bus Ticket Reservation System</h2>
+                <hr>
+                <p>
+                    We provide an easy-to-use and secure online booking system that lets you book your bus tickets hassle-free. Our user-friendly platform is designed to make your travel experience as smooth and convenient as possible. With our extensive network of bus routes and schedules, you can easily plan your journey and book your tickets from the comfort of your home or office.
+                    <br> Our website is designed with you in mind, and we offer a range of features to enhance your experience, including a search function that lets you find the bus schedules and fares that best suit your needs. You can also use our interactive map to explore different routes, stops, and destinations.
+                    <br> Our booking system is fast, reliable, and secure. We accept multiple payment options, so you can choose the one that is most convenient for you. You can also access your booking details and manage your reservations from your personal account.
+                    <br> We pride ourselves on providing excellent customer service, and our friendly and knowledgeable team is always available to assist you with any questions or concerns. Whether you are a frequent traveler or planning a one-time trip, we are here to help you make the most of your journey.
+                    <br> So why wait? Book your tickets today and experience the convenience and comfort of our Bus Ticket Booking System.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+
+</div> {% endblock pageContent %}
